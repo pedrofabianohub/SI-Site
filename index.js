@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-const database = require('../src/services/database')
+const database = require('./src/services/database')
 
 app.use(morgan('dev'))
 app.use(bodyParser.json())
