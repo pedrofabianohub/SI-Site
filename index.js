@@ -12,8 +12,13 @@ app.use(cors())
 
 const loginRoute = require('./src/routes/login.routes')
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 app.use('/redefinirSenha', loginRoute)
 
-app.listen(3000, () => {
-    console.log('Server is up!')
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
