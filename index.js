@@ -20,9 +20,6 @@ app.get('/', (req, res) => {
 // Rota para redefinição de senha
 app.use('/redefinirSenha', loginRoute);
 
-// Configuração do banco de dados
-database.connect(); // Exemplo fictício, você precisa implementar a função connect() em database.js
-
 // Porta do servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
